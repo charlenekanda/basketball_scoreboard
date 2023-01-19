@@ -1,41 +1,21 @@
-let scoreHome = 0;
+let score = 0;
 let scoreGuest = 0;
 
 document.getElementById("home-score").textContent = scoreHome;
 document.getElementById("guest-score").textContent = scoreGuest;
 
-function addOne() {
-    scoreHome += 1
-    document.getElementById("home-score").textContent = scoreHome;
-    console.log("le score home est de " + scoreHome)
+function addHome(style, number) {
+    score += number
+    if (style === "home") {  
+        document.getElementById(style+"-score").textContent = score
+        console.log("le score "+style+ " est de " + score)   
+    };
 }
 
-function addTwo() {
-     scoreHome += 2
-     document.getElementById("home-score").textContent = scoreHome;
-    console.log("le score home est de " + scoreHome)
-}
-
-function addThree() {
-    scoreHome += 3
-    document.getElementById("home-score").textContent = scoreHome;
-    console.log("le score home est de " + scoreHome)
-}
-
-function addOneGuest() {
-    scoreGuest += 1
-    document.getElementById("guest-score").textContent = scoreGuest;
-    console.log("le score home est de " + scoreGuest)
-}
-
-function addTwoGuest() {
-     scoreGuest += 2
-     document.getElementById("guest-score").textContent = scoreGuest;
-    console.log("le score home est de " + scoreHome)
-}
-
-function addThreeGuest() {
-    scoreGuest += 3
-    document.getElementById("guest-score").textContent = scoreGuest;
-    console.log("le score home est de " + scoreGuest)
+function addGuest(style, number) {
+    scoreGuest += number
+    if (style === "guest") {  
+        document.getElementById(style+"-score").textContent = scoreGuest
+        console.log("le score "+style+ " est de " + scoreGuest)   
+    };
 }
